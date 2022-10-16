@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_menu"
-    tools:context=".presentation.StartMenuFragment">
+    tools:context=".presentation.fragments.StartMenuFragment">
 
     <TextView
         android:id="@+id/tv_best_result_label"
