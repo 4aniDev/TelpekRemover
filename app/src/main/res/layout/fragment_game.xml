@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragments.GameFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_game"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_timer_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        android:text="@string/timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_timer_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@id/tv_timer_label"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="00"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_score_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        android:text="@string/score"
+        app:layout_constraintEnd_toStartOf="@id/tv_score_value"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_score_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textColor="@color/yellow"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="99"
+        />
+
+
+    <ImageView
+        android:id="@+id/iv_hole_1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hole_4"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_hole_2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hole_5"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_3"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_1" />
+
+    <ImageView
+        android:id="@+id/iv_hole_3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hole_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_2" />
+
+    <ImageView
+        android:id="@+id/iv_hole_4"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginLeft="14dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@id/iv_hole_7"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_hole_5"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hole_8"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_6"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_4" />
+
+    <ImageView
+        android:id="@+id/iv_hole_6"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginRight="5dp"
+        android:src="@drawable/hole"
+        app:layout_constraintBottom_toTopOf="@+id/iv_hole_9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_5" />
+
+    <ImageView
+        android:id="@+id/iv_hole_7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hole"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_8"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_hole_8"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hole"
+        android:layout_marginBottom="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_hole_9"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_7" />
+
+    <ImageView
+        android:id="@+id/iv_hole_9"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/hole"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_hole_8" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
