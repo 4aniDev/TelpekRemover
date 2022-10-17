@@ -11,6 +11,8 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import ru.chani.telpekremover.R
 import ru.chani.telpekremover.databinding.FragmentGameBinding
+import ru.chani.telpekremover.domain.entity.GameResult
+import ru.chani.telpekremover.presentation.contract.navigator
 import ru.chani.telpekremover.presentation.viewmodels.GameViewModel
 
 class GameFragment : Fragment() {
@@ -86,8 +88,9 @@ class GameFragment : Fragment() {
         }
 
         viewModel.gameFinish.observe(viewLifecycleOwner) {
-            Toast.makeText(context, " Game FINISH", Toast.LENGTH_LONG).show()
+            navigator().launchResult(gameResult = viewModel.gameResult.value ?: GameResult())
         }
+
     }
 
     private fun setOnClickListeners() {
