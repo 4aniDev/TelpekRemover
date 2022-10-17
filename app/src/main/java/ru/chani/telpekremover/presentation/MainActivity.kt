@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import ru.chani.telpekremover.R
 import ru.chani.telpekremover.domain.entity.GameResult
 import ru.chani.telpekremover.presentation.contract.Navigator
+import ru.chani.telpekremover.presentation.fragments.GameFinishedFragment
 import ru.chani.telpekremover.presentation.fragments.GameFragment
 import ru.chani.telpekremover.presentation.fragments.StartMenuFragment
 
@@ -67,7 +68,8 @@ class MainActivity : AppCompatActivity(), Navigator {
     }
 
     override fun launchResult(gameResult: GameResult) {
-        TODO("Not yet implemented")
+        val gameFinishedFragment = GameFinishedFragment.newInstance(gameResult = gameResult)
+        launchFragment(fragment = gameFinishedFragment)
     }
 
     private fun hideSystemUi() {
