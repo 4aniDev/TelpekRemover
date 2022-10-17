@@ -31,7 +31,7 @@ class StartMenuFragment : Fragment() {
     ): View {
         _binding = FragmentStartMenuBinding.inflate(inflater, container, false)
 
-        viewModel.gameResult.observe(viewLifecycleOwner){
+        viewModel.gameBestResult.observe(viewLifecycleOwner){
             binding.tvBestResultValue.text = it.scoreString
         }
         binding.btPlay.setOnClickListener { navigator().launchGame() }

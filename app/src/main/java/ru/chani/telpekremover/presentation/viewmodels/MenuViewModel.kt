@@ -17,8 +17,8 @@ open class MenuViewModel(application: Application) : AndroidViewModel(applicatio
     private val context = application
     private lateinit var mainThemeMusic: MediaPlayer
 
-    private val _gameResult = MutableLiveData<GameResult>()
-    val gameResult: LiveData<GameResult> = _gameResult
+    private val _gameBestResult = MutableLiveData<GameResult>()
+    val gameBestResult: LiveData<GameResult> = _gameBestResult
 
 
     fun init() {
@@ -41,7 +41,7 @@ open class MenuViewModel(application: Application) : AndroidViewModel(applicatio
     }
 
     private fun getBestScore(){
-        _gameResult.value = getRecordOfTheBestGameResult()
+        _gameBestResult.value = getRecordOfTheBestGameResult()
     }
 
     private fun initMusic() {

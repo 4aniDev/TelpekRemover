@@ -24,6 +24,8 @@ class GameFinishedFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         parseArgs()
+        viewModel = ViewModelProvider(this)[GameFinishedViewModel::class.java]
+        viewModel.init()
     }
 
     override fun onCreateView(
@@ -37,18 +39,14 @@ class GameFinishedFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel = ViewModelProvider(this)[GameFinishedViewModel::class.java]
+        viewModel.gameBestResult.observe(viewLifecycleOwner) {
+            binding.tvBestResultValue.text = it.scoreString
+        }
 
         binding.tvYourScoredValue.text = gameResult.scoreString
 
         setOnClickListeners()
     }
-
-    override fun onStart() {
-        super.onStart()
-        binding.tvBestResultValue.text = viewModel.getBestScore()
-    }
-
 
     private fun parseArgs() {
         requireArguments().getParcelable<GameResult>(KEY_GAME_RESULT)?.let {
