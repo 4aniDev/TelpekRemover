@@ -49,7 +49,6 @@ class GameFragment : Fragment() {
         super.onPause()
     }
 
-
     override fun onResume() {
         viewModel.resumeGame()
         super.onResume()
