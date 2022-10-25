@@ -9,6 +9,4 @@
     <string name="play">Play</string>
     <string name="about_game">"\"Telpek\" is a casual game, players can play with a relaxed mood. How to play: The player taps the screen to catch the hat on the character's head, and scores points depending on the number of hats hit."</string>
     <string name="about_game_label">About game:</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

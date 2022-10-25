@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Telpek</string>
+    <string name="about_game">\"Telpek\" - arkaýyn ýagdaýda oýnap bolýan oýun. Oýnaýyş düzgüni: utuş gazlanmak üçin oýunçy utuş uçin gahrymany kellesindäki telpeginiň ekrana basyp gapmaly, utuşy näçe kop telpegi gazananlygynda bagly.</string>
+    <string name="your_scored">Gazanan telpekleri:</string>
+    <string name="best_result">Rekord:</string>
+    <string name="menu">Esasy Menýu</string>
+    <string name="play_again">Ýenede oýnamak</string>
+    <string name="play">Oýnamak</string>
+    <string name="timer">Galan wagt:</string>
+    <string name="about_game_label">Oýun barada:</string>
+    <string name="score">Telpek:</string>
+</resources>
